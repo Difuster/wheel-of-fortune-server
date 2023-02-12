@@ -6,8 +6,10 @@
   "scripts": {
     "server": "nodemon index.js",
     "client": "npm run start --prefix ../client",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",  
+    "build": "npm run build --prefix ../wheel-of-fortune-client",
     "server-prod": "node index.js",
+    "start-prod": "npm run server-prod -s ../wheel-of-fortune-client/build",
     "client-prod": "npm run start --prefix ../wheel-of-fortune-client",
     "prod": "concurrently \"npm run client-prod\" \"npm run server-prod\""
   },
