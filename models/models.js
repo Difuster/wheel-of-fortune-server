@@ -33,5 +33,4 @@ module.exports = {
   Winner,
   Bank,
   Jackpot,
-  UserWinner
 }
