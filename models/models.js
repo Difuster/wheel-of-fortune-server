@@ -28,13 +28,6 @@ const Jackpot = sequelize.define('jackpot', {
   gainValue: {type: DataTypes.INTEGER, allowNull: false},
 });
 
-const UserWinner = sequelize.define('user_winner', {
-  id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-})
-
-User.belongsToMany(Winner, { through: UserWinner })
-Winner.belongsToMany(User, { through: UserWinner })
-
 module.exports = {
   User,
   Winner,
